@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- ============ SEO ============ -->
+<title>Exclusive House Party | Mumbai Pune Bangalore Indore | ₹399 Pass</title>
+<meta name="description" content="Book your exclusive House Party pass for just ₹399. Secret location revealed only after successful payment. Limited entries.">
+<meta name="keywords" content="house party 2026, secret party mumbai, secret party pune, secret party bangalore, secret party indore, house party pass, exclusive party india">
+<meta name="author" content="House Party 2026">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://housepartyy2026.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Exclusive House Party 2026 | ₹399 Pass | Secret Location">
+<meta property="og:description" content="One Night. Four Cities. One Massive House Party. Limited passes. Secret location unlocked only after payment.">
+<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:url" content="https://housepartyy2026.com/">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Exclusive House Party 2026 | ₹399 Pass">
+<meta name="twitter:description" content="Secret location. Premium crowd. Only ₹399. Limited passes across Mumbai, Pune, Bangalore & Indore.">
+
+<!-- Favicon -->
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+<!-- Preconnects -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Fonts: Unbounded (display / signature) + Manrope (body) -->
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Tailwind (CDN build for rapid, production-safe static delivery) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          void: '#050308',
+          deep: '#0D0A1C',
+          panel: '#120E24',
+          purple: {
+            DEFAULT: '#7C3AED',
+            deep: '#4C1D95',
+            glow: '#A855F7',
+          },
+          pink: {
+            DEFAULT: '#FF2E9F',
+            soft: '#FF6EC7',
+          },
+          blueink: '#1E1B4B',
+          mist: '#B9B3D6',
+          gold: '#E8C77E',
+        },
+        fontFamily: {
+          display: ['Unbounded', 'sans-serif'],
+          body: ['Manrope', 'sans-serif'],
+        },
+        boxShadow: {
+          glow: '0 0 40px -5px rgba(168,85,247,0.55)',
+          pinkglow: '0 0 40px -5px rgba(255,46,159,0.55)',
+        },
+      }
+    }
+  }
+</script>
+
+<!-- AOS (scroll reveal) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+
+<!-- Custom styles -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-void text-white font-body antialiased overflow-x-hidden">
+
+<!-- ============================================================
+     SCROLL PROGRESS BAR
+============================================================= -->
+<div id="scrollProgress" class="fixed top-0 left-0 h-[3px] bg-gradient-to-r from-purple via-pink to-purple-glow z-[70]" style="width:0%"></div>
+
+<!-- ============================================================
+     AMBIENT BACKGROUND (gradient blobs + particles, fixed layer)
+============================================================= -->
+<div class="fixed inset-0 -z-10 bg-void overflow-hidden" aria-hidden="true">
+  <div class="animated-gradient absolute inset-0"></div>
+  <div class="blur-circle blur-circle--1"></div>
+  <div class="blur-circle blur-circle--2"></div>
+  <div class="blur-circle blur-circle--3"></div>
+  <div id="particles" class="absolute inset-0"></div>
+  <div class="noise-overlay absolute inset-0"></div>
+</div>
+
+<!-- ============================================================
+     NAVBAR
+============================================================= -->
+<header class="fixed top-0 inset-x-0 z-50">
+  <nav class="glass-nav mx-3 mt-3 md:mx-6 md:mt-4 rounded-2xl px-4 md:px-6 py-3 flex items-center justify-between">
+    <a href="#hero" class="flex items-center gap-2 group" aria-label="House Party 2026 Home">
+      <span class="w-9 h-9 rounded-lg bg-gradient-to-br from-purple to-pink flex items-center justify-center font-display font-800 text-sm shadow-glow group-hover:scale-105 transition-transform">HP</span>
+      <span class="font-display font-700 tracking-wide text-sm md:text-base">HOUSE PARTY<span class="text-pink">.</span>26</span>
+    </a>
+
+    <ul class="hidden lg:flex items-center gap-8 font-medium text-sm text-mist">
+      <li><a href="#why" class="nav-link">Why Join</a></li>
+      <li><a href="#cities" class="nav-link">Cities</a></li>
+      <li><a href="#details" class="nav-link">Details</a></li>
+      <li><a href="#faq" class="nav-link">FAQ</a></li>
+      <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+    </ul>
+
+    <div class="flex items-center gap-3">
+      <div id="navCountdown" class="hidden md:flex items-center gap-1 text-[11px] font-semibold text-mist border border-white/10 rounded-full px-3 py-1.5 bg-white/5">
+        <span class="w-1.5 h-1.5 rounded-full bg-pink animate-pulse"></span>
+        <span id="navCountdownText">Loading…</span>
+      </div>
+      <button onclick="openBuyModal('nav')" class="btn-cta-sm">Buy Pass</button>
+      <button id="menuToggle" aria-label="Open menu" class="lg:hidden w-9 h-9 flex items-center justify-center rounded-lg border border-white/10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden glass-nav mx-3 mt-2 rounded-2xl px-6 py-5 lg:hidden">
+    <ul class="flex flex-col gap-4 font-medium text-mist">
+      <li><a href="#why" class="nav-link">Why Join</a></li>
+      <li><a href="#cities" class="nav-link">Cities</a></li>
+      <li><a href="#details" class="nav-link">Details</a></li>
+      <li><a href="#faq" class="nav-link">FAQ</a></li>
+      <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     1. HERO
+============================================================= -->
+<section id="hero" class="relative min-h-[100svh] flex items-center pt-32 pb-20 px-5 md:px-10">
+  <div class="max-w-6xl mx-auto w-full">
+
+    <div class="flex flex-col items-center text-center gap-6">
+
+      <div data-aos="fade-down" class="badge-glass inline-flex items-center gap-2 text-xs md:text-sm font-semibold text-pink-soft">
+        <span class="w-2 h-2 rounded-full bg-pink animate-pulse"></span>
+        4 CITIES · 1 NIGHT · 25 JULY 2026
+      </div>
+
+      <h1 data-aos="fade-up" data-aos-delay="100" class="font-display font-800 leading-[0.95] text-[13vw] sm:text-6xl md:text-7xl lg:text-8xl tracking-tight">
+        <span class="block">EXCLUSIVE</span>
+        <span class="block text-gradient">HOUSE PARTY</span>
+      </h1>
+
+      <p data-aos="fade-up" data-aos-delay="200" class="max-w-xl text-mist text-base md:text-lg font-medium">
+        Limited Passes. Secret Location. Premium Crowd.
+        <span class="block mt-1 text-white font-display font-700 text-xl md:text-2xl">Only ₹399.</span>
+      </p>
+
+      <p data-aos="fade-up" data-aos-delay="250" class="text-sm md:text-base text-mist/80 max-w-lg">
+        One Night. Four Cities. One Massive House Party. Pay to unlock the secret location — sent only to confirmed guests.
+      </p>
+
+      <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col sm:flex-row items-center gap-4 mt-2">
+        <button onclick="openBuyModal('hero')" class="btn-cta-lg">
+          Buy Pass — ₹399
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+        </button>
+        <a href="#why" class="btn-ghost">Learn More</a>
+      </div>
+
+      <!-- Countdown -->
+      <div data-aos="zoom-in" data-aos-delay="350" class="mt-10 grid grid-cols-4 gap-3 md:gap-5">
+        <div class="countdown-box"><span id="cd-days" class="cd-num">00</span><span class="cd-label">Days</span></div>
+        <div class="countdown-box"><span id="cd-hours" class="cd-num">00</span><span class="cd-label">Hours</span></div>
+        <div class="countdown-box"><span id="cd-mins" class="cd-num">00</span><span class="cd-label">Mins</span></div>
+        <div class="countdown-box"><span id="cd-secs" class="cd-num">00</span><span class="cd-label">Secs</span></div>
+      </div>
+
+      <p data-aos="fade-up" data-aos-delay="400" class="text-xs text-mist/60 mt-2">Until the vault opens — 25 July 2026, 8 PM onwards</p>
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <a href="#why" aria-label="Scroll down" class="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-mist/60 text-xs">
+    <span>Scroll</span>
+    <span class="scroll-mouse"><span class="scroll-dot"></span></span>
+  </a>
+</section>
+
+<!-- City marquee ticker -->
+<div class="relative border-y border-white/5 bg-white/[0.02] py-3 overflow-hidden">
+  <div class="marquee flex gap-10 whitespace-nowrap font-display text-sm tracking-widest text-mist/50">
+    <span>MUMBAI ✦ PUNE ✦ BANGALORE ✦ INDORE ✦ MUMBAI ✦ PUNE ✦ BANGALORE ✦ INDORE ✦</span>
+    <span>MUMBAI ✦ PUNE ✦ BANGALORE ✦ INDORE ✦ MUMBAI ✦ PUNE ✦ BANGALORE ✦ INDORE ✦</span>
+  </div>
+</div>
+
+<!-- Premium features strip -->
+<div class="px-5 md:px-10 py-8 border-b border-white/5">
+  <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up">
+    <div class="feature-pill">
+      <span class="feature-pill__icon">🍸</span>
+      <span>Bar &amp; Drinks Available</span>
+    </div>
+    <div class="feature-pill">
+      <span class="feature-pill__icon">🏆</span>
+      <span>Competitions &amp; Games</span>
+    </div>
+    <div class="feature-pill">
+      <span class="feature-pill__icon">🏛️</span>
+      <span>Large-Capacity Venue</span>
+    </div>
+    <div class="feature-pill">
+      <span class="feature-pill__icon">🥂</span>
+      <span>Premium Crowd Only</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     2. WHY JOIN
+============================================================= -->
+<section id="why" class="px-5 md:px-10 py-24 md:py-32">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <span class="eyebrow">The Experience</span>
+      <h2 class="section-title mt-3">Why This Isn't<br class="hidden sm:block"> Just Another Party</h2>
+      <div class="divider-gold mt-5"></div>
+      <p class="text-mist mt-5">Eight reasons the crowd keeps calling it the best ₹399 they've ever spent.</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
+      <!-- Card items -->
+      <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="why-icon">🎧</div>
+        <h3>Live DJ</h3>
+        <p>Curated sets that build all night — no dead air, no filler.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="50">
+        <div class="why-icon">🍸</div>
+        <h3>Bar &amp; Drinks</h3>
+        <p>A fully stocked bar on-site all night — drinks available to purchase.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="why-icon">🏆</div>
+        <h3>Competitions &amp; Games</h3>
+        <p>Dance-offs, party games and surprise prizes through the night.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="why-icon">✨</div>
+        <h3>Premium Crowd</h3>
+        <p>A handpicked, verified guest list — no random walk-ins.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="why-icon">📸</div>
+        <h3>Photography</h3>
+        <p>A pro team capturing the night so you don't have to.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="250">
+        <div class="why-icon">💃</div>
+        <h3>Dance Floor</h3>
+        <p>A floor built for the night, sound system to match.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="why-icon">🏛️</div>
+        <h3>Large-Capacity Venue</h3>
+        <p>Spacious grounds built to host a big crowd without feeling packed.</p>
+      </div>
+      <div class="why-card" data-aos="fade-up" data-aos-delay="350">
+        <div class="why-icon">🌙</div>
+        <h3>Memories for Life</h3>
+        <p>The kind of night your group chat replays for months.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. CITIES
+============================================================= -->
+<section id="cities" class="px-5 md:px-10 py-24 md:py-32 relative">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <span class="eyebrow">Same Night, Four Vaults</span>
+      <h2 class="section-title mt-3">Pick Your City</h2>
+      <div class="divider-gold mt-5"></div>
+      <p class="text-mist mt-5">Every city gets its own large-capacity secret venue. Yours unlocks the moment your payment clears.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="city-card" data-city="Mumbai" data-aos="fade-up" data-aos-delay="0">
+        <div class="city-card__top">
+          <span class="city-card__lock">🔒</span>
+          <span class="city-card__tag">Coastal Chapter</span>
+        </div>
+        <h3 class="city-card__name" data-scramble="MUMBAI">MUMBAI</h3>
+        <p class="city-card__loc">Secret Location · Unlocked After Payment</p>
+        <button onclick="openBuyModal('city-mumbai')" class="city-card__cta">Unlock Mumbai</button>
+      </div>
+
+      <div class="city-card" data-city="Pune" data-aos="fade-up" data-aos-delay="100">
+        <div class="city-card__top">
+          <span class="city-card__lock">🔒</span>
+          <span class="city-card__tag">Hillside Chapter</span>
+        </div>
+        <h3 class="city-card__name" data-scramble="PUNE">PUNE</h3>
+        <p class="city-card__loc">Secret Location · Unlocked After Payment</p>
+        <button onclick="openBuyModal('city-pune')" class="city-card__cta">Unlock Pune</button>
+      </div>
+
+      <div class="city-card" data-city="Bangalore" data-aos="fade-up" data-aos-delay="200">
+        <div class="city-card__top">
+          <span class="city-card__lock">🔒</span>
+          <span class="city-card__tag">Garden Chapter</span>
+        </div>
+        <h3 class="city-card__name" data-scramble="BANGALORE">BANGALORE</h3>
+        <p class="city-card__loc">Secret Location · Unlocked After Payment</p>
+        <button onclick="openBuyModal('city-bangalore')" class="city-card__cta">Unlock Bangalore</button>
+      </div>
+
+      <div class="city-card" data-city="Indore" data-aos="fade-up" data-aos-delay="300">
+        <div class="city-card__top">
+          <span class="city-card__lock">🔒</span>
+          <span class="city-card__tag">Heartland Chapter</span>
+        </div>
+        <h3 class="city-card__name" data-scramble="INDORE">INDORE</h3>
+        <p class="city-card__loc">Secret Location · Unlocked After Payment</p>
+        <button onclick="openBuyModal('city-indore')" class="city-card__cta">Unlock Indore</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. EVENT DETAILS
+============================================================= -->
+<section id="details" class="px-5 md:px-10 py-24 md:py-32">
+  <div class="max-w-6xl mx-auto glass-panel rounded-3xl p-6 md:p-12" data-aos="fade-up">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="eyebrow">The Fine Print (Kept Short)</span>
+      <h2 class="section-title mt-3">Event Details</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="detail-item">
+        <span class="detail-icon">📅</span>
+        <div><h4>Date</h4><p>25 July 2026</p></div>
+      </div>
+      <div class="detail-item">
+        <span class="detail-icon">🎟️</span>
+        <div><h4>Entry</h4><p>Pass Required</p></div>
+      </div>
+      <div class="detail-item">
+        <span class="detail-icon">📍</span>
+        <div><h4>Venue</h4><p>Large-capacity premium venue, address shared after payment</p></div>
+      </div>
+      <div class="detail-item">
+        <span class="detail-icon">👗</span>
+        <div><h4>Dress Code</h4><p>Party Wear</p></div>
+      </div>
+      <div class="detail-item">
+        <span class="detail-icon">⏰</span>
+        <div><h4>Timing</h4><p>8 PM onwards</p></div>
+      </div>
+      <div class="detail-item">
+        <span class="detail-icon">💳</span>
+        <div><h4>Price</h4><p>₹399 per pass</p></div>
+      </div>
+      <div class="detail-item">
+        <span class="detail-icon">🍹</span>
+        <div><h4>On-Site</h4><p>Bar, drinks &amp; live competitions with prizes</p></div>
+      </div>
+      <div class="detail-item">
+        <span class="detail-icon">👥</span>
+        <div><h4>Capacity</h4><p>Spacious venue, curated for a premium crowd</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. WHY BUY EARLY
+============================================================= -->
+<section class="px-5 md:px-10 py-24 md:py-32">
+  <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <span class="eyebrow">Don't Wait</span>
+      <h2 class="section-title mt-3">Why Buy Early?</h2>
+      <p class="text-mist mt-4 mb-8">Passes are capped per city on purpose — it's what keeps the crowd premium and the venue secret.</p>
+      <ul class="space-y-4">
+        <li class="early-item"><span class="early-check">✓</span> Only limited entries per city</li>
+        <li class="early-item"><span class="early-check">✓</span> Venue details shared only with confirmed attendees</li>
+        <li class="early-item"><span class="early-check">✓</span> No spot entry — pass is mandatory</li>
+        <li class="early-item"><span class="early-check">✓</span> Strictly first come, first served</li>
+      </ul>
+      <button onclick="openBuyModal('early')" class="btn-cta-lg mt-8">Secure My Pass Now</button>
+    </div>
+
+    <div data-aos="fade-left" class="relative">
+      <div class="glass-panel rounded-3xl p-8 md:p-10">
+        <p class="text-mist text-sm mb-6">Live pass status</p>
+        <div class="space-y-6">
+          <div>
+            <div class="flex justify-between text-sm mb-2"><span>Mumbai</span><span class="text-pink-soft font-semibold" id="stat-mumbai">82%</span></div>
+            <div class="progress-track"><div class="progress-fill" style="width:82%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-2"><span>Pune</span><span class="text-pink-soft font-semibold" id="stat-pune">67%</span></div>
+            <div class="progress-track"><div class="progress-fill" style="width:67%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-2"><span>Bangalore</span><span class="text-pink-soft font-semibold" id="stat-bangalore">91%</span></div>
+            <div class="progress-track"><div class="progress-fill" style="width:91%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-sm mb-2"><span>Indore</span><span class="text-pink-soft font-semibold" id="stat-indore">58%</span></div>
+            <div class="progress-track"><div class="progress-fill" style="width:58%"></div></div>
+          </div>
+        </div>
+        <p class="text-xs text-mist/60 mt-6">Capacity fills independently — grab yours before your city hits 100%.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ANIMATED COUNTERS
+============================================================= -->
+<section class="px-5 md:px-10 py-16">
+  <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5 text-center">
+    <div class="counter-box" data-aos="zoom-in">
+      <span class="counter-num" data-target="4">0</span>
+      <p>Cities</p>
+    </div>
+    <div class="counter-box" data-aos="zoom-in" data-aos-delay="50">
+      <span class="counter-num" data-target="2400">0</span>
+      <p>Guests Last Season</p>
+    </div>
+    <div class="counter-box" data-aos="zoom-in" data-aos-delay="100">
+      <span class="counter-num" data-target="399" data-prefix="₹">0</span>
+      <p>Only Per Pass</p>
+    </div>
+    <div class="counter-box" data-aos="zoom-in" data-aos-delay="150">
+      <span class="counter-num" data-target="1">0</span>
+      <p>Unforgettable Night</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     7. TESTIMONIALS
+============================================================= -->
+<section id="testimonials" class="px-5 md:px-10 py-24 md:py-32">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+      <span class="eyebrow">Last Season</span>
+      <h2 class="section-title mt-3">What Past Guests Said</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="stars">★★★★★</div>
+        <p>"Didn't know the venue till 6 PM the day of, and honestly that was half the thrill. Sound, crowd, everything was next level for the price."</p>
+        <div class="testimonial-author">
+          <div class="avatar">RA</div>
+          <div><h5>Riya A.</h5><span>Mumbai · Attended 2025</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="stars">★★★★★</div>
+        <p>"Went alone, left with a group I still party with. The 'secret location' thing genuinely makes you show up on time."</p>
+        <div class="testimonial-author">
+          <div class="avatar">KV</div>
+          <div><h5>Kabir V.</h5><span>Pune · Attended 2025</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="stars">★★★★★</div>
+        <p>"₹399 for a night that felt like a ₹5000 ticket. DJ, crowd, decor — nothing felt cut-price. Already waiting for the next one."</p>
+        <div class="testimonial-author">
+          <div class="avatar">SN</div>
+          <div><h5>Sanya N.</h5><span>Bangalore · Attended 2025</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. FAQ
+============================================================= -->
+<section id="faq" class="px-5 md:px-10 py-24 md:py-32">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <span class="eyebrow">Questions</span>
+      <h2 class="section-title mt-3">Frequently Asked</h2>
+    </div>
+
+    <div class="space-y-3" id="faqList" data-aos="fade-up">
+      <div class="faq-item">
+        <button class="faq-question">
+          What is included?
+          <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Your ₹399 pass includes full entry, live DJ sets, dance floor access, themed decor and professional event photography. Food and beverages are available on-site (details shared closer to the date).</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          When will I receive venue?
+          <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>The exact address is emailed and WhatsApped to confirmed guests closer to the event date, and again on the morning of 25 July 2026.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          How will I get my pass?
+          <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Immediately after payment, a confirmation with your digital pass is sent to your registered email. Please check your spam folder if it doesn't arrive within a few minutes.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Refund policy
+          <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Passes are non-refundable once purchased, since city-wise capacity is limited and allocated on confirmation. In case the event is cancelled or rescheduled by the organizers, a full refund or free transfer to the new date will be provided.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Can I transfer my pass?
+          <svg class="faq-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. Passes can be transferred to another person up to 48 hours before the event — just message our WhatsApp support with the new guest's details.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     8. FINAL CTA
+============================================================= -->
+<section class="px-5 md:px-10 py-24 md:py-36">
+  <div class="max-w-4xl mx-auto text-center glass-panel rounded-3xl p-10 md:p-16 relative overflow-hidden" data-aos="zoom-in">
+    <div class="cta-glow"></div>
+    <span class="eyebrow">25 July 2026 · 8 PM Onwards</span>
+    <h2 class="font-display font-800 text-4xl md:text-6xl mt-4 leading-tight">Ready to <span class="text-gradient">Party?</span></h2>
+    <p class="text-mist mt-4 mb-10 max-w-md mx-auto">Book your pass now — before your city sells out.</p>
+    <div class="flex flex-col items-center gap-4">
+      <span class="font-display text-3xl md:text-4xl font-800">₹399</span>
+      <button onclick="openBuyModal('final-cta')" class="btn-cta-lg">Buy Pass Now</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+============================================================= -->
+<footer class="px-5 md:px-10 py-14 border-t border-white/5">
+  <div class="max-w-6xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items-center gap-2 mb-4">
+        <span class="w-8 h-8 rounded-lg bg-gradient-to-br from-purple to-pink flex items-center justify-center font-display font-800 text-xs">HP</span>
+        <span class="font-display font-700 text-sm">HOUSE PARTY.26</span>
+      </div>
+      <p class="text-mist text-sm">One night. Four cities. One massive house party. Secret location unlocked only after payment.</p>
+    </div>
+
+    <div>
+      <h5 class="footer-heading">Explore</h5>
+      <ul class="space-y-2 text-sm text-mist">
+        <li><a href="#why" class="footer-link">Why Join</a></li>
+        <li><a href="#cities" class="footer-link">Cities</a></li>
+        <li><a href="#faq" class="footer-link">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5 class="footer-heading">Legal</h5>
+      <ul class="space-y-2 text-sm text-mist">
+        <li><a href="#" onclick="openLegalModal('privacy');return false;" class="footer-link">Privacy Policy</a></li>
+        <li><a href="#" onclick="openLegalModal('terms');return false;" class="footer-link">Terms &amp; Conditions</a></li>
+        <li><a href="mailto:hello@housepartyy2026.com" class="footer-link">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h5 class="footer-heading">Follow</h5>
+      <div class="flex gap-3">
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon">📷</a>
+        <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon">💬</a>
+      </div>
+      <p class="text-xs text-mist/50 mt-6">Submitted details are used only for ticketing &amp; event communication — never sold or shared. See our Privacy Policy.</p>
+    </div>
+  </div>
+
+  <div class="max-w-6xl mx-auto mt-10 pt-6 border-t border-white/5 text-center text-xs text-mist/50">
+    &copy; <span id="year"></span> House Party 2026. All rights reserved.
+  </div>
+</footer>
+
+<!-- ============================================================
+     STICKY MOBILE BUY BAR
+============================================================= -->
+<div id="stickyBar" class="sticky-bar">
+  <div>
+    <p class="text-xs text-mist">Pass price</p>
+    <p class="font-display font-800 text-lg">₹399</p>
+  </div>
+  <button onclick="openBuyModal('sticky')" class="btn-cta-sm !py-3 !px-6">Buy Pass</button>
+</div>
+
+<!-- ============================================================
+     BUY PASS MODAL (glassmorphism popup form)
+============================================================= -->
+<div id="buyModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="buyModalTitle">
+  <div class="modal-panel">
+    <button class="modal-close" onclick="closeBuyModal()" aria-label="Close">&times;</button>
+
+    <div class="mb-6">
+      <span class="eyebrow">Almost there</span>
+      <h3 id="buyModalTitle" class="font-display font-700 text-2xl mt-2">Reserve Your Pass</h3>
+      <p class="text-mist text-sm mt-1">Fill this in — the secret venue is sent only to confirmed guests.</p>
+    </div>
+
+    <form id="buyForm" novalidate>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" required autocomplete="name" placeholder="e.g. Aditi Sharma">
+          <span class="form-error" data-error-for="fullName"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="city">City *</label>
+          <select id="city" name="city" required autocomplete="address-level2">
+            <option value="" disabled selected>Select your city</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Indore">Indore</option>
+          </select>
+          <span class="form-error" data-error-for="city"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="phone">Phone Number *</label>
+          <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="10-digit mobile number" inputmode="numeric">
+          <span class="form-error" data-error-for="phone"></span>
+        </div>
+
+        <div class="form-field">
+          <label for="whatsapp">WhatsApp Number *</label>
+          <input type="tel" id="whatsapp" name="whatsapp" required autocomplete="tel" placeholder="10-digit WhatsApp number" inputmode="numeric">
+          <span class="form-error" data-error-for="whatsapp"></span>
+        </div>
+
+        <div class="form-field form-field--full">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@example.com">
+          <span class="form-error" data-error-for="email"></span>
+        </div>
+
+        <div class="form-field form-field--full">
+          <label for="currentLocation">Current Location *</label>
+          <input type="text" id="currentLocation" name="currentLocation" required autocomplete="address-level2" placeholder="Area / locality you're currently in">
+          <span class="form-error" data-error-for="currentLocation"></span>
+        </div>
+
+        <div class="form-field form-field--full">
+          <label for="message">Additional Message / Query <span class="optional">(optional)</span></label>
+          <textarea id="message" name="message" rows="3" placeholder="Anything you'd like us to know?"></textarea>
+        </div>
+      </div>
+
+      <label class="checkbox-field">
+        <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+        <span>I agree to the <a href="#" onclick="openLegalModal('terms');return false;">Terms &amp; Conditions</a> and <a href="#" onclick="openLegalModal('privacy');return false;">Privacy Policy</a>. *</span>
+      </label>
+      <span class="form-error" data-error-for="agreeTerms"></span>
+
+      <button type="submit" class="btn-cta-lg w-full mt-6 justify-center">
+        Continue to Payment
+      </button>
+      <p class="text-xs text-mist/50 text-center mt-3">🔒 Your details are encrypted and used only for ticketing &amp; event communication.</p>
+    </form>
+  </div>
+</div>
+
+<!-- ============================================================
+     EXIT INTENT POPUP
+============================================================= -->
+<div id="exitModal" class="modal-overlay">
+  <div class="modal-panel modal-panel--sm text-center">
+    <button class="modal-close" onclick="closeExitModal()" aria-label="Close">&times;</button>
+    <div class="text-5xl mb-4">⚡</div>
+    <h3 class="font-display font-700 text-2xl mb-2">Wait! Passes Are Selling Fast.</h3>
+    <p class="text-mist text-sm mb-6">Some cities are already past 85% capacity. Don't lose your spot for ₹399.</p>
+    <button onclick="closeExitModal(); openBuyModal('exit-intent');" class="btn-cta-lg w-full justify-center">Buy My Pass Now</button>
+    <button onclick="closeExitModal()" class="text-mist/60 text-xs mt-4 underline">No thanks, I'll risk it</button>
+  </div>
+</div>
+
+<!-- ============================================================
+     LEGAL MODAL (Privacy / Terms)
+============================================================= -->
+<div id="legalModal" class="modal-overlay">
+  <div class="modal-panel">
+    <button class="modal-close" onclick="closeLegalModal()" aria-label="Close">&times;</button>
+    <div id="legalContent" class="prose-legal"></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     LOADING OVERLAY (before Razorpay redirect)
+============================================================= -->
+<div id="loadingOverlay" class="loading-overlay">
+  <div class="loading-spinner"></div>
+  <p class="font-display font-600 mt-6">Taking you to secure payment…</p>
+  <p class="text-mist text-sm mt-1">Do not close this window</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+
+<!-- SUPABASE (optional) — uncomment once you've added your project URL and
+     anon key in CONFIG.supabase inside script.js. See README.md for setup. -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script> -->
+
+<script src="script.js"></script>
+</body>
+</html>

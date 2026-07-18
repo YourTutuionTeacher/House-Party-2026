@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Payment Successful | House Party 2026</title>
+<meta name="description" content="Your House Party 2026 pass is confirmed. Check your email for your pass and secret venue details.">
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          void: '#050308', deep: '#0D0A1C',
+          purple: { DEFAULT: '#7C3AED', glow: '#A855F7' },
+          pink: { DEFAULT: '#FF2E9F', soft: '#FF6EC7' },
+          mist: '#B9B3D6',
+        },
+        fontFamily: { display: ['Unbounded','sans-serif'], body: ['Manrope','sans-serif'] },
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-void text-white font-body antialiased min-h-screen flex items-center justify-center px-5 py-16 overflow-x-hidden">
+
+<div class="fixed inset-0 -z-10 overflow-hidden" aria-hidden="true">
+  <div class="animated-gradient absolute inset-0"></div>
+  <div class="blur-circle blur-circle--1"></div>
+  <div class="blur-circle blur-circle--2"></div>
+  <div id="confettiLayer" class="absolute inset-0 overflow-hidden pointer-events-none"></div>
+</div>
+
+<main class="max-w-lg w-full">
+  <div class="glass-panel rounded-3xl p-8 md:p-12 text-center relative">
+
+    <div class="text-6xl mb-2" aria-hidden="true">🎉</div>
+    <span class="eyebrow">Payment Confirmed</span>
+    <h1 class="font-display font-800 text-3xl md:text-4xl mt-3 leading-tight">Thank You!</h1>
+
+    <p class="text-mist mt-4 leading-relaxed">
+      Your payment has been received successfully. Your House Party Pass and the Secret Venue Details will be sent to your registered Email ID.
+    </p>
+
+    <div id="regSummary" class="hidden text-left glass-panel rounded-2xl p-5 mt-6 text-sm">
+      <p class="text-mist text-xs uppercase tracking-wide mb-2">Booking Summary</p>
+      <div class="space-y-1.5">
+        <p><span class="text-mist">Name:</span> <span id="sumName" class="font-semibold"></span></p>
+        <p><span class="text-mist">City:</span> <span id="sumCity" class="font-semibold"></span></p>
+        <p><span class="text-mist">Email:</span> <span id="sumEmail" class="font-semibold"></span></p>
+        <p><span class="text-mist">Amount:</span> <span class="font-semibold">₹399</span></p>
+      </div>
+    </div>
+
+    <div class="badge-glass inline-flex items-start gap-2 text-left mt-6 text-xs md:text-sm text-mist">
+      <span>📩</span>
+      <span>Please check your Inbox. If you don't find it, kindly check your <strong class="text-white">Spam / Junk folder</strong>.</span>
+    </div>
+
+    <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="https://wa.me/919999999999?text=Hi!%20I%20just%20booked%20my%20House%20Party%202026%20pass%20and%20need%20help." target="_blank" rel="noopener noreferrer" class="btn-cta-lg justify-center">
+        💬 WhatsApp Support
+      </a>
+      <a href="index.html" class="btn-ghost text-center">Return Home</a>
+    </div>
+
+    <p class="text-xs text-mist/50 mt-8">A copy of your registration is also saved on this device for your reference.</p>
+  </div>
+</main>
+
+<script>
+  // Populate booking summary from localStorage (saved by script.js before redirect)
+  try {
+    const reg = JSON.parse(localStorage.getItem('hp26_registration') || 'null');
+    if (reg) {
+      document.getElementById('sumName').textContent = reg.fullName || '—';
+      document.getElementById('sumCity').textContent = reg.city || '—';
+      document.getElementById('sumEmail').textContent = reg.email || '—';
+      document.getElementById('regSummary').classList.remove('hidden');
+    }
+  } catch (e) { console.warn('No registration data found:', e); }
+
+  // Lightweight confetti celebration
+  (function confetti() {
+    const layer = document.getElementById('confettiLayer');
+    const colors = ['#7C3AED', '#FF2E9F', '#A855F7', '#FF6EC7', '#FFFFFF'];
+    const count = window.innerWidth < 640 ? 40 : 70;
+
+    for (let i = 0; i < count; i++) {
+      const piece = document.createElement('span');
+      piece.className = 'confetti-piece';
+      const size = Math.random() * 8 + 4;
+      piece.style.width = `${size}px`;
+      piece.style.height = `${size * 0.4}px`;
+      piece.style.left = `${Math.random() * 100}%`;
+      piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+      piece.style.transform = `rotate(${Math.random() * 360}deg)`;
+      const duration = Math.random() * 3 + 3.5;
+      const delay = Math.random() * 2.5;
+      piece.style.animation = `confettiFall ${duration}s ease-in ${delay}s forwards`;
+      layer.appendChild(piece);
+    }
+
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes confettiFall {
+        0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(110vh) rotate(540deg); opacity: 0; }
+      }`;
+    document.head.appendChild(style);
+  })();
+
+  document.getElementById('year') && (document.getElementById('year').textContent = new Date().getFullYear());
+</script>
+</body>
+</html>

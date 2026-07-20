@@ -14,7 +14,7 @@ const CONFIG = {
   // ⚠️ PASTE YOUR RAZORPAY PAYMENT LINK HERE ⚠️
   // Replace the placeholder below with your real Razorpay Payment Link URL.
   // Example: 'https://rzp.io/l/abc123XYZ'
-  razorpayPaymentLink: 'https://YOUR-RAZORPAY-PAYMENT-LINK',
+  razorpayPaymentLink: 'https://rzp.io/rzp/rt3lNpU',
 
   whatsappSupportNumber: '919999999999', // country code + number, no + or spaces
 

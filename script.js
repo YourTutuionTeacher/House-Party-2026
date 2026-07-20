@@ -25,8 +25,8 @@ const CONFIG = {
   // If url/anonKey are left as-is, the form still works — it just saves to
   // localStorage only, and skips the Supabase insert.
   supabase: {
-    url: 'YOUR_SUPABASE_PROJECT_URL',     // e.g. 'https://abcxyz.supabase.co'
-    anonKey: 'YOUR_SUPABASE_ANON_KEY',
+    url: 'https://lnqgtvybndiloxzsldtt.supabase.co',     // e.g. 'https://abcxyz.supabase.co'
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxucWd0dnlibmRpbG94enNsZHR0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODQzMjc2MzAsImV4cCI6MjA5OTkwMzYzMH0.HE3R1BmoBQoDSxzjpIMwWppAgIrc3-XNlN9fRII4TJI',
     table: 'registrations',
   },
 };

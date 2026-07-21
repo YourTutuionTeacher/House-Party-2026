@@ -14,9 +14,9 @@ const CONFIG = {
   // ⚠️ PASTE YOUR RAZORPAY PAYMENT LINK HERE ⚠️
   // Replace the placeholder below with your real Razorpay Payment Link URL.
   // Example: 'https://rzp.io/l/abc123XYZ'
-  razorpayPaymentLink: 'https://rzp.io/rzp/rt3lNpU',
+  razorpayPaymentLink: 'https://rzp.io/rzp/4dJMsljV',
 
-  whatsappSupportNumber: '919999999999', // country code + number, no + or spaces
+  whatsappSupportNumber: '916261346572', // country code + number, no + or spaces
 
   // ⚠️ SUPABASE — paste your project details here to store registrations ⚠️
   // 1. Uncomment the supabase-js <script> tag near the bottom of index.html.
